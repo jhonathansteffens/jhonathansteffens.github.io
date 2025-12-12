@@ -1,142 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Oi, Isabel ❤️</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Isabel ❤️</title>
+  <style>
+    :root {
+      --bg1: #fff6f8;
+      --bg2: #fff0f4;
+      --card: #ffffff;
+      --text: #3b3b3b;
+      --accent: #ff5b7f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Roboto, -apple-system, "Helvetica Neue", Arial;
+      background: linear-gradient(160deg, var(--bg1), var(--bg2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      color: var(--text);
+    }
+    .wrap {
+      width: 100%;
+      max-width: 900px;
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+      padding: 26px;
+      overflow: hidden;
+      text-align: center;
+    }
+    h1 {
+      margin: 4px 0 8px;
+      font-size: 28px;
+      letter-spacing: -0.2px;
+    }
+    p.lead {
+      margin: 0 auto 18px;
+      max-width: 74%;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+    .video-area {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: center;
+      justify-items: center;
+    }
+    video, .video-fallback {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 12px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+      background: black;
+    }
+    .controls-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 6px;
+    }
+    .final {
+      display: none;
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(255,91,127,0.06), rgba(255,91,127,0.02));
+      color: var(--accent);
+      font-weight: 600;
+      line-height: 1.4;
+      font-size: 16px;
+    }
+    .btn {
+      margin-top: 14px;
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+    }
+    footer.small {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #8a8a8a;
+    }
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ffccd5, #ffe6ee);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #4a4a4a;
-            overflow: hidden;
-        }
-
-        .card {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 450px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            animation: fadeIn 1.4s ease;
-        }
-
-        h1 {
-            font-size: 26px;
-            margin-bottom: 18px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.4;
-            margin-bottom: 25px;
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 12px 22px;
-            border-radius: 10px;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-
-        .btn1 {
-            background: #ff8fa3;
-            color: white;
-        }
-
-        .btn1:hover {
-            background: #ff7a8e;
-        }
-
-        .btn2 {
-            background: #ffc2d1;
-            color: #4a4a4a;
-        }
-
-        .btn2:hover {
-            background: #ffb3c5;
-        }
-
-        #final {
-            display: none;
-            animation: fadeIn 1s ease;
-            font-size: 20px;
-            margin-top: 20px;
-            color: #ff4d6d;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .heart {
-            font-size: 45px;
-            animation: pulse 1.4s infinite;
-            margin-bottom: 12px;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.85; }
-            50% { transform: scale(1.15); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.85; }
-        }
-
-    </style>
+    /* responsive */
+    @media (max-width:700px){
+      p.lead { max-width: 92%; font-size: 16px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap" id="page">
+    <h1>Querida Srta. Gatinha ❤️</h1>
 
-    <div class="card" id="main">
-        
-        <div class="heart">❤️</div>
+    <p class="lead">
+      Oi, dona Isa.<br><br>
+      Nestes meses ao seu lado eu descobri o que é sorrir de um jeito novo. Você me mostrou dedicação, sensibilidade e uma coragem que eu admiro demais.<br><br>
+      Cada momento com você — das nossas perguntas aleatórias, até nossos momentos apenas abraçadinhos — foram incríveis.<br><br>
+      Eu quero viver muitos e muitos anos ao seu lado, dividindo alegrias, desafios e vitórias.<br><br>
+      Aperta o play <br><br>
+      (PS:Edição vinda direto do auge dos anos 2000 kkkkkk)
+    </p>
 
-        <h1>Oi, Srta. Gatinha</h1>
+    <div class="video-area">
+      <video id="heroVideo" controls playsinline preload="metadata">
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo. Se preferir, aqui está o link do vídeo: <a href="video.mp4">abrir vídeo</a>.
+      </video>
 
-        <p>
-            Eu posso não entender muito sobre química…<br>
-            Mas sei que algo entre nós tem reagido do jeito certo. ✨<br><br>
-            E depois desses meses tão incríveis ao seu lado…<br>
-            Eu queria te perguntar uma coisa.
-        </p>
-
-        <p style="font-size: 20px; margin-top: -5px;"><b>Você aceita namorar comigo?</b></p>
-
-        <div class="btn-container">
-            <button class="btn btn1" onclick="responder()">Sim</button>
-            <button class="btn btn2" onclick="responder()">Claro que sim</button>
-        </div>
+      <div class="controls-note">Toque no play para iniciar (muitos celulares exigem seu toque para reproduzir áudio).</div>
     </div>
 
-    <div id="final">
-        ❤️ Te amooo Isaaa.<br>
-        Prometo estar do seu lado, cuidar de você<br>
-        e fazer parte da sua história com muito carinho.  
+    <div id="finalMsg" class="final">
+       Quando terminar, tenho uma pergunta especial para fazer para você, e essa não tão aleatória kkkkk ❤️💍
+      <div style="margin-top:10px"><a class="btn" href="#" onclick="scrollToTop();return false;">Quero te ver agora</a></div>
     </div>
 
-    <script>
-        function responder() {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("final").style.display = "block";
-        }
-    </script>
+    <footer class="small">
+      Feito com carinho por Jhonathan.
+    </footer>
+  </div>
 
+  <script>
+    const video = document.getElementById('heroVideo');
+    const finalMsg = document.getElementById('finalMsg');
+
+    video.addEventListener('ended', () => {
+      finalMsg.style.display = 'block';
+      finalMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    video.addEventListener('pause', () => {});
+    video.addEventListener('play', () => {
+      finalMsg.style.display = 'none';
+    });
+
+    function scrollToTop(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
